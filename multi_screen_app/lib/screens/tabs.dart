@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:multi_screen_app/data/Items.dart';
 import 'package:multi_screen_app/screens/categories.dart';
 import 'package:multi_screen_app/screens/items.dart';
+import 'package:multi_screen_app/widgets/main_drawer.dart';
 
 class Tabs extends StatefulWidget {
   const Tabs({super.key});
@@ -57,7 +58,7 @@ class _TabsState extends State<Tabs> {
         title: Text(activateTitle),
       ),
       body: activatePage,
-      // drawer: Drawer(),
+      drawer: const MainDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
           _selected(index);
